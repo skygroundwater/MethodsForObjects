@@ -26,17 +26,14 @@ public class Book {
         return yearOfPublishing;
     }
     public boolean equals(Object other){
-        if(other==null){
-            return false;
-        }
         if(this == other) {
             return true;
         }
-        if(this.getClass() != other.getClass()){
+        if(other==null || this.getClass() != other.getClass()){
             return false;
         }
         Book book1 = (Book) other;
-        return name.equals(book1.name);
+        return name.equals(book1.name) && author.equals(book1.author) && yearOfPublishing==book1.yearOfPublishing;
     }
     public int hashCode(){
         return java.util.Objects.hash(name, yearOfPublishing, author);

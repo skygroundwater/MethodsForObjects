@@ -10,17 +10,14 @@ public class Author {
         return "Автор "+firstName + " " + lastName;
     }
     public boolean equals(Object other){
-        if(other == null){
-            return false;
-        }
-        if(this.getClass() != other.getClass()){
+        if(other == null||this.getClass() != other.getClass()){
             return false;
         }
         if(this == other) {
             return true;
         }
         Author author1  = (Author) other;
-        return firstName.equals(author1.firstName);
+        return firstName.equals(author1.firstName) && lastName.equals(author1.lastName);
     }
     public int hashCode(){
         return java.util.Objects.hash(firstName, lastName);

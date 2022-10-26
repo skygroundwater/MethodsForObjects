@@ -14,5 +14,6 @@ public class Main {
 
         System.out.println(book1.equals(book3));
         System.out.println(author1);
+        System.out.println(book3.equals(null));
     }
 }
