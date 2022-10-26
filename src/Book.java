@@ -26,6 +26,12 @@ public class Book {
         return yearOfPublishing;
     }
     public boolean equals(Object other){
+        if(this.toString()==null){
+            return false;
+        }
+        if(this == other) {
+            return true;
+        }
         if(this.getClass() != other.getClass()){
             return false;
         }
@@ -33,6 +39,6 @@ public class Book {
         return name.equals(book1.name);
     }
     public int hashCode(){
-        return java.util.Objects.hash(name);
+        return java.util.Objects.hash(name, yearOfPublishing, author);
     }
 }
