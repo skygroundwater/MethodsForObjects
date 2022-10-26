@@ -26,7 +26,7 @@ public class Book {
         return yearOfPublishing;
     }
     public boolean equals(Object other){
-        if(this.toString()==null){
+        if(other==null){
             return false;
         }
         if(this == other) {

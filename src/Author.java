@@ -10,7 +10,7 @@ public class Author {
         return "Автор "+firstName + " " + lastName;
     }
     public boolean equals(Object other){
-        if(this.toString() == null){
+        if(other == null){
             return false;
         }
         if(this.getClass() != other.getClass()){
